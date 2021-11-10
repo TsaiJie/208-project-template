@@ -14,6 +14,7 @@ export default {
     pieChartData: Array,
   },
   mounted() {
+    // 如果需要在单个组件中发起请求，可以在mount中获取
     console.log(helpFunc());
   },
 };

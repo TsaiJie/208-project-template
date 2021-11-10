@@ -1,13 +1,19 @@
 <template>
   <!-- 摆放各个组件以及布局 -->
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
-    <PieChart msg="PieChart" :pieChartData="bannerList"/>
-    <ScatterChart msg="ScatterChart" :scatterChartData="songs"/>
-    <h2>{{ count }}</h2>
-    <button @click="add">+1</button>
-    <p>{{bannerList && bannerList.length}}</p>
-    <p>{{songs && songs.length}}</p>
+  <div class="layout">
+    <div class="top">
+      <img alt="Vue logo" src="../assets/logo.png" />
+      <PieChart msg="PieChart" :pieChartData="bannerList" />
+    </div>
+    <div class="left">
+      <ScatterChart msg="ScatterChart" :scatterChartData="songs" />
+    </div>
+    <div class="bottom">
+      <h2>{{ count }}</h2>
+      <button @click="add">+1</button>
+      <p>{{ bannerList && bannerList.length }}</p>
+      <p>{{ songs && songs.length }}</p>
+    </div>
   </div>
 </template>
 
@@ -23,7 +29,7 @@ export default {
   },
   mounted() {
     console.log(this.count);
-    const id = 32311
+    const id = 32311;
     this.$store.dispatch('getBannerListAsync');
     this.$store.dispatch('getSongDetailAsync', id);
   },
@@ -35,9 +41,9 @@ export default {
     bannerList() {
       return this.$store.state.bannerList;
     },
-    songs(){
-      return this.$store.state.songs
-    }
+    songs() {
+      return this.$store.state.songs;
+    },
   },
   methods: {
     add() {
