@@ -1,6 +1,7 @@
 <template>
   <div class="scatterChart">
     <h1>{{ msg }}</h1>
+    <p>{{ scatterChartData && scatterChartData[0] }}</p>
   </div>
 </template>
 
@@ -10,6 +11,7 @@ export default {
   name: 'ScatterChart',
   props: {
     msg: String,
+    scatterChartData: Array,
   },
   mounted() {
     console.log(helpFunc());
