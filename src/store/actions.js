@@ -1,12 +1,12 @@
-import { getBannerRequest } from '@/api/banner.js';
-import { getSongDetail } from '@/api/songDetail.js';
+import { getPieChartDataRequest } from '@/api/pieChartApi.js';
+import { getScatterChartDataRequest } from '@/api/scatterChartApi.js';
 export default {
-  async getBannerListAsync(context) {
+  async getPieChartDataAsync(context) {
     // 发送请求
-    context.commit('getBannerList', await getBannerRequest());
+    context.commit('getPieChartData', await getPieChartDataRequest());
   },
-  async getSongDetailAsync(context, id) {
+  async getScatterChartDataAsync(context, id) {
     // 发送带参数的请求
-    context.commit('getSongs', await getSongDetail(id));
+    context.commit('getScatterChartData', await getScatterChartDataRequest());
   },
 };

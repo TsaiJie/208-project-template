@@ -4,10 +4,10 @@ export default {
     // 变更状态
     state.count += payload.amount;
   },
-  getBannerList(state, payload) {
-    state.bannerList = payload.banners;
+  getPieChartData(state, payload) {
+    state.pieChartData = payload;
   },
-  getSongs(state, payload) {
-    state.songs = payload.songs;
+  getScatterChartData(state, payload) {
+    state.scatterChartData = payload;
   },
 };

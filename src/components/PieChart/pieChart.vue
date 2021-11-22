@@ -15,10 +15,13 @@ export default {
   },
   mounted() {
     // 如果需要在单个组件中发起请求，可以在mount中获取
+
     console.log(helpFunc());
   },
 };
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped></style>
+<style scoped>
+@import './pieChart.css';
+</style>

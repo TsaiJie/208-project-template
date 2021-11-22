@@ -3,8 +3,8 @@ import mutations from './mutations';
 import actions from './actions';
 const state = {
   count: 1,
-  bannerList: null,
-  songs: null,
+  scatterChartData: null,
+  pieChartData:null
 }
 export default createStore({
   state,
