@@ -16,42 +16,50 @@ npm run serve or yarn serve
 ## 模板项目的基本结构
 
 ```
-├──src		#前端
-│    ├── assets
-│    ├── components #存放具体的组件
-│	      ├── PieChart #单个具体的组件
-│		      ├──pieChart.vue #编写具体的组件信息
-│		      ├──pieChartHelp.js #这个组件的js帮助函数
-│             └──pieChart.css #这个组件的样式
-│		  └── ScatterChart #单个具体的组件
-│			   ├──scatterChart.vue #编写具体的组件信息
-│			   └──scatterChartHelp.js #这个组件的js帮助函数
-└──scatterChart.css #这个组件的样式
-│	  ├── api    #存放发送请求
-│		├──  config.js  #配置axios
-│		├──  pieChartRequest.js # 具体图表的某个请求
-│		└──  xxxx.js
-
-│     ├── store #vuex
-│		├── index.js
-│		└── actions.js #存放异步的action
-    └── mutations.js #修改state
-│     ├── utils
-│		└── xxxx,js #项目中通用js函数
-│     ├── views
-│			└── Home.vue #对所有的组件进行布局
-│     └── router #前端路由
-│			└── index.js
-│	├── App.vue    #项目根组件
-│	└── main.js    #项目入口，打包入口
-├──server       # 服务端
-│    ├── utils #后端功能函数
-│    └── routes #后端路由管理
-│	        ├── pieChart.js #某块业务的路由
-│			└── ScatterChart.js #某块业务的路由
-│	 └── app.js    #后端入口文件
-
+├── README.md
+├── babel.config.js
+├── package-lock.json
+├── package.json
+├── public
+│   ├── favicon.ico
+│   └── index.html
+├── server
+│   ├── app.js
+│   ├── routes
+│   │   ├── pieChart.js
+│   │   └── scatterChart.js
+│   └── utils
+└── src
+    ├── App.vue
+    ├── api
+    │   ├── config.js
+    │   ├── pieChartApi.js
+    │   └── scatterChartApi.js
+    ├── assets
+    │   └── logo.png
+    ├── components
+    │   ├── PieChart
+    │   │   ├── pieChart.css
+    │   │   ├── pieChart.vue
+    │   │   └── pieChartHelp.js
+    │   └── ScatterChart
+    │       ├── scatterChart.css
+    │       ├── scatterChart.vue
+    │       └── scatterChartHelp.js
+    ├── main.js
+    ├── router
+    │   └── index.js
+    ├── store
+    │   ├── actions.js
+    │   ├── index.js
+    │   └── mutations.js
+    ├── utils
+    │   └── hlep.js
+    └── views
+        ├── Home.css
+        └── Home.vue
 ```
+img
 
 1. Js 文件命名： 小驼峰法 如 pieChartHelp 第一个单词小写,其他单词首字母大写
 2. components 文件命名： 大驼峰法 如 PieChart 所有单词首字母大写
