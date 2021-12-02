@@ -7,7 +7,7 @@ npm i or yarn install
 # 3.启动后台
 node server/app.js
 # 4.启动前端
-npm run serve or yarn server
+npm run serve or yarn serve
 
 # ！！！注意 yarn和npm命令只能使用一个，不能混合使用，混合使用可能会出现一些奇怪的bug
 ```
@@ -23,7 +23,7 @@ npm run serve or yarn server
 │             └──pieChart.css #这个组件的样式
 │			 └── ScatterChart #单个具体的组件
 │			     ├──scatterChart.vue #编写具体的组件信息
-│				 ├──scatterChartHelp.js #这个组件的js帮助函数
+│				 └──scatterChartHelp.js #这个组件的js帮助函数
 └──scatterChart.css #这个组件的样式
 │	  ├── api    #存放发送请求
 │			├──  config.js  #配置axios
@@ -32,22 +32,22 @@ npm run serve or yarn server
 
 │    ├── store #vuex
 │			├── index.js 
-│			├── actions.js #存放异步的action
+│			└── actions.js #存放异步的action
 └── mutations.js #修改state
 │    ├── utils
 │			└── xxxx,js #项目中通用js函数
 │    ├── views
 │			└── Home.vue #对所有的组件进行布局
 │    └── router #前端路由
-│				└── index.js 
+│			└── index.js 
 │	  ├── App.vue    #项目根组件
 │	  └── main.js    #项目入口，打包入口
 ├──server       # 服务端
 │    ├── utils #后端功能函数
 │    └── routes #后端路由管理
 │	        ├── pieChart.js #某块业务的路由
-│			 └── ScatterChart.js #某块业务的路由
-│	  └── app.js    #后端入口文件
+│			└── ScatterChart.js #某块业务的路由
+│	 └── app.js    #后端入口文件
 
 ```
 
