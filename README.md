@@ -28,22 +28,22 @@ npm run serve or yarn serve
 │			   └──scatterChartHelp.js #这个组件的js帮助函数
 └──scatterChart.css #这个组件的样式
 │	  ├── api    #存放发送请求
-│			├──  config.js  #配置axios
-│			├──  pieChartRequest.js # 具体图表的某个请求
-│			└──  xxxx.js
+│		├──  config.js  #配置axios
+│		├──  pieChartRequest.js # 具体图表的某个请求
+│		└──  xxxx.js
 
 │     ├── store #vuex
-│			├── index.js
-│			└── actions.js #存放异步的action
-      └── mutations.js #修改state
+│		├── index.js
+│		└── actions.js #存放异步的action
+    └── mutations.js #修改state
 │     ├── utils
-│			└── xxxx,js #项目中通用js函数
+│		└── xxxx,js #项目中通用js函数
 │     ├── views
 │			└── Home.vue #对所有的组件进行布局
 │     └── router #前端路由
 │			└── index.js
-│	  ├── App.vue    #项目根组件
-│	  └── main.js    #项目入口，打包入口
+│	├── App.vue    #项目根组件
+│	└── main.js    #项目入口，打包入口
 ├──server       # 服务端
 │    ├── utils #后端功能函数
 │    └── routes #后端路由管理
