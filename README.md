@@ -23,44 +23,42 @@ npm run serve or yarn serve
 ├── public
 │   ├── favicon.ico
 │   └── index.html
-├── server
-│   ├── app.js
-│   ├── routes
-│   │   ├── pieChart.js
-│   │   └── scatterChart.js
-│   └── utils
-└── src
-    ├── App.vue
-    ├── api
-    │   ├── config.js
-    │   ├── pieChartApi.js
-    │   └── scatterChartApi.js
-    ├── assets
-    │   └── logo.png
-    ├── components
-    │   ├── PieChart
-    │   │   ├── pieChart.css
-    │   │   ├── pieChart.vue
-    │   │   └── pieChartHelp.js
+├── server #后端主目录
+│   ├── app.js #后端入口文件
+│   ├── routes #后端路由管理
+│   │   ├── pieChart.js #某块业务的路由
+│   │   └── scatterChart.js #某块业务的路由
+│   └── utils #后端功能函数
+└── src #前端主目录
+    ├── App.vue #项目根组件
+    ├── api #存放发送请求
+    │   ├── config.js #配置axios
+    │   ├── pieChartApi.js #具体图表的某个请求
+    │   └── scatterChartApi.js #具体图表的某个请求
+    ├── assets #存放图标等一些文件
+    │   └── logo.png 
+    ├── components #存放具体的组件
+    │   ├── PieChart #单个具体的组件
+    │   │   ├── pieChart.css #这个组件的样式
+    │   │   ├── pieChart.vue #编写具体的组件信息
+    │   │   └── pieChartHelp.js #这个组件的功能函数
     │   └── ScatterChart
     │       ├── scatterChart.css
     │       ├── scatterChart.vue
     │       └── scatterChartHelp.js
-    ├── main.js
-    ├── router
+    ├── main.js #前端主文件
+    ├── router  #前端路由，配置跳转页
     │   └── index.js
-    ├── store
-    │   ├── actions.js
+    ├── store   #vuex
+    │   ├── actions.js  #存放异步的action
     │   ├── index.js
-    │   └── mutations.js
-    ├── utils
+    │   └── mutations.js #同步修改state
+    ├── utils #项目的通用功能函数
     │   └── hlep.js
-    └── views
-        ├── Home.css
-        └── Home.vue
+    └── views #视图组件
+        ├── Home.css #样式处理
+        └── Home.vue #对所有的子组件进行布局
 ```
-img
-
 1. Js 文件命名： 小驼峰法 如 pieChartHelp 第一个单词小写,其他单词首字母大写
 2. components 文件命名： 大驼峰法 如 PieChart 所有单词首字母大写
 3. api 请求函数全部放在 api 文件夹中
