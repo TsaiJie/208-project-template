@@ -18,6 +18,7 @@ npm run serve or yarn serve
 ```
 ├── README.md
 ├── babel.config.js
+├── .prettierrc.js #prettierrc格式化的配置
 ├── package-lock.json
 ├── package.json
 ├── public
@@ -90,3 +91,21 @@ npm run serve or yarn serve
    ```
 9. 常量一般全部大写，每个单词使用分隔符隔开，比如
    `const BASE_URL = 'http://localhost:3000/';`变量使用小驼峰命名法
+
+## prettier配置
+加入了prettier配置（`.prettierrc.js`）,使用prettier格式化文件，例如使用
+`npx prettier --write src/views/Home.vue` 可以格式化Home.vue这个文件。
+
+注意`src/views/Home.vue`这个是文件的路径，主要看你执行该命令所在的目录，如果是你在`src/views`这个目录下执行格式化命令的话，应该这么写 `npx prettier --write Home.vue`
+
+这样格式化文件可能很麻烦，每次都需要运行命令。但是可以下载vscode插件（`Prettier - Code formatter`
+）配置来解决。
+
+下面这个网址是`prettier`一个简单的教程很有用可以看看
+
+文字教程：`https://juejin.cn/post/6990929456382607374`
+
+相应的视频教程：`https://www.bilibili.com/video/BV183411r7YK?from=search&seid=5236192765464508070`
+
+下面的网址是配置`prettierrc.js`的官网`https://prettier.io/docs/en/options.html?spm=a2c4e.11153940.blogcont422690.11.5d0b5721zZ3CkZ`
+
